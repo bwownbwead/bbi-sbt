@@ -1,0 +1,18 @@
+{
+  "author": "Big Brand Ideas",
+  "name": "BBI",
+  "description": "Big Brand Ideas",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-autoprefixer": "^2.0.0",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-uglify": "~0.6.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-sass": "~0.17.0",
+    "grunt-smushit": "~1.3.0",
+    "grunt-svgstore": "^0.5.0",
+    "matchdep": "~0.3.0"
+  }
+}

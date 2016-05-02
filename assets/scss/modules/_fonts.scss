@@ -1,0 +1,25 @@
+/*
+	Font utilities
+	----------------------------------- */
+
+	// Convert pixels to Rems
+	@function calculate-rem($size) {
+		$rem-size: $size / $font-size;
+		@return #{$rem-size}rem;
+	}
+
+	@mixin font-size-only($size) {
+		font-size: $size;
+		font-size: calculate-rem($size);
+	}
+
+	@mixin line-height-only($size) {
+		line-height: $size;
+		line-height: calculate-rem($size);
+	}
+
+	// Font size + line-height: Output both pixel and rem size
+	@mixin font-size($size, $line-height: 1.3) {
+		@include font-size-only($size);
+		@include line-height-only($size * $line-height);
+	}
