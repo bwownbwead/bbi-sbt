@@ -1,17 +1,11 @@
 /*
-	Includes
-	----------------------------------- */
+Includes
+----------------------------------- */
 
-	@import 'base/variables';
-
-	// Modules
-	@import 'modules/fonts';
-
-	// Base styles
-	@import 'base/reset';
-	@import 'base/fonts';
-
-	// Partials
-	@import 'partials/template';
-	@import 'partials/header';
-	@import 'partials/footer';
+@import '00_settings/settings';
+@import '01_tools/tools';
+@import '02_generic/generic';
+@import '03_base/base';
+@import '04_objects/objects';
+@import '05_components/components';
+@import '05_trumps/trumps';
