@@ -3,6 +3,91 @@
 Components
 ----------------------------------- */
 
+// common
+
+.inner-wrap {
+	padding: 20px;
+
+	&--horz {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	&--vert {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+// site header
+
+.site-header {
+
+	&__logo-wrap {
+		margin-bottom: 40px;
+	}
+
+	&__logo {
+		background: #000;
+		display: block;
+		height: 35px;
+		width: 150px;
+	}
+}
+
+// headings
+
+.section-heading {
+	font-size: 34px;
+	font-weight: 400;
+	margin-bottom: 22px;
+
+	b {
+		font-weight: 700;
+	}
+}
+
+.fluid-image {
+	width: 100%;
+}
+
+// site intro
+
+.site-intro {
+	display: none;
+}
+
+.cta {
+	border: 3px solid #8ce300;
+	border-radius: 10px;
+	display: table;
+	font-weight: 900;
+	padding: 10px 40px;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	&--small {
+		padding: 10px 20px;
+	}
+
+	&--center {
+		margin-left: auto;
+		margin-right: auto; 
+	}
+}
+
+// block ctas
+
+
+
 @import 'components.site-navigation';
 @import 'components.secondary-navigation';
 @import 'components.search-bike-form';
+@import 'components.hero-list';
+@import 'components.block-ctas';
+@import 'components.product-list';
+@import 'components.testimonials';
+
+
+
+

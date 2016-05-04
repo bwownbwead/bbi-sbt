@@ -372,6 +372,94 @@ td,
 th {
   padding: 0; }
 
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+body {
+  line-height: 1; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+nav ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent; }
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none; }
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold; }
+
+del {
+  text-decoration: line-through; }
+
+abbr[title], dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0; }
+
+input, select {
+  vertical-align: middle; }
+
 /* Border Box Sizing */
 html {
   box-sizing: border-box; }
@@ -399,22 +487,144 @@ html {
 body {
   font-family: 'Lato', sans-serif; }
 
-.inner-wrap {
-  padding: 0 20px; }
+p {
+  margin-bottom: 16px; }
+
+label, input, select {
+  display: block;
+  width: 100%; }
+
+label {
+  margin-bottom: 10px; }
+
+input, select {
+  background: #fff;
+  margin-bottom: 20px; }
 
 /*
 Components
 ----------------------------------- */
+.inner-wrap {
+  padding: 20px; }
+  .inner-wrap--horz {
+    padding-bottom: 0;
+    padding-top: 0; }
+  .inner-wrap--vert {
+    padding-left: 0;
+    padding-right: 0; }
+
+.site-header__logo-wrap {
+  margin-bottom: 40px; }
+
+.site-header__logo {
+  background: #000;
+  display: block;
+  height: 35px;
+  width: 150px; }
+
+.section-heading {
+  font-size: 34px;
+  font-weight: 400;
+  margin-bottom: 22px; }
+  .section-heading b {
+    font-weight: 700; }
+
+.fluid-image {
+  width: 100%; }
+
+.site-intro {
+  display: none; }
+
+.cta {
+  border: 3px solid #8ce300;
+  border-radius: 10px;
+  display: table;
+  font-weight: 900;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-transform: uppercase; }
+  .cta--small {
+    padding: 10px 20px; }
+  .cta--center {
+    margin-left: auto;
+    margin-right: auto; }
+
 .site-navigation {
   display: none; }
 
 .secondary-navigation {
   display: -webkit-box;
+  display: -moz-box;
+  display: box;
   display: -webkit-flex;
+  display: -moz-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-box-pack: center;
+  box-pack: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  -o-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+  .secondary-navigation__item {
+    text-align: center;
+    width: 30%; }
+  .secondary-navigation__link {
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase; }
 
 .search-bike-form {
+  background: #ededed; }
+
+.hero-list {
+  background: #ededed; }
+  .hero-list__list-item {
+    margin-bottom: 30px; }
+  .hero-list__item-heading {
+    font-size: 16px; }
+
+.block-ctas__cta {
+  border-bottom: 1px solid #000;
+  padding-bottom: 40px;
+  padding-top: 40px; }
+  .block-ctas__cta:last-child {
+    border-bottom: 0; }
+
+.product-list__item {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-bottom: 40px; }
+
+.product-list__image {
+  padding-right: 20px;
+  width: 50%; }
+
+.product-list__info {
+  width: 50%; }
+
+.product-list__cta {
+  padding-top: 20px;
+  text-align: center;
+  width: 100%; }
+
+.product-list__price span {
+  color: #8ce300; }
+
+.testimonials {
   background: #ededed; }
 
 .no-list {

@@ -1,8 +1,16 @@
 
 .secondary-navigation {
-	display: flex;
+	@include display(flex);
+	@include justify-content(center);
 
-	li {
+	&__item {
+		text-align: center;
+		width: 30%;
+	}
 
+	&__link {
+		font-weight: bold;
+		text-decoration: none;
+		text-transform: uppercase;	
 	}
 }
