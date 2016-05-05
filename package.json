@@ -3,7 +3,9 @@
   "name": "BBI",
   "description": "Big Brand Ideas",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "sass-mq": "^3.2.9"
+  },
   "devDependencies": {
     "grunt": "~0.4.5",
     "grunt-autoprefixer": "^2.0.0",
@@ -17,4 +19,3 @@
     "matchdep": "~0.3.0"
   }
 }
-

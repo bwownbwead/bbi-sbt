@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
 Includes
 ----------------------------------- */
@@ -8,6 +9,34 @@ Settings
  * http://bourbon.io
  * Copyright 2011-2014 thoughtbot, inc.
  * MIT License */
+body:before {
+  background-color: #FCF8E3;
+  border-bottom: 1px solid #FBEED5;
+  border-left: 1px solid #FBEED5;
+  color: #C09853;
+  font: small-caption;
+  padding: 3px 6px;
+  pointer-events: none;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+  @media (min-width: 20em) {
+    body:before {
+      content: "mobile ≥ 320px (20em)"; } }
+  @media (min-width: 30em) {
+    body:before {
+      content: "mobileLandscape ≥ 480px (30em)"; } }
+  @media (min-width: 46.25em) {
+    body:before {
+      content: "tablet ≥ 740px (46.25em)"; } }
+  @media (min-width: 61.25em) {
+    body:before {
+      content: "desktop ≥ 980px (61.25em)"; } }
+  @media (min-width: 81.25em) {
+    body:before {
+      content: "wide ≥ 1300px (81.25em)"; } }
+
 /*
 Tools
 ----------------------------------- */
@@ -525,7 +554,12 @@ Components
 .section-heading {
   font-size: 34px;
   font-weight: 400;
-  margin-bottom: 22px; }
+  margin-bottom: 22px;
+  font-weight: 100;
+  font-style: italic; }
+  @media (min-width: 46.25em) {
+    .section-heading {
+      color: red; } }
   .section-heading b {
     font-weight: 700; }
 

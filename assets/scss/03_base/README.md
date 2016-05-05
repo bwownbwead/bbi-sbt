@@ -4,5 +4,5 @@ SETTINGS
 Usage
 -----
 
-Unclasses HTML elements (type selectors)
+Unclassed HTML elements (type selectors)
 

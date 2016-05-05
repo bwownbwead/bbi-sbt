@@ -41,6 +41,11 @@ Components
 	font-size: 34px;
 	font-weight: 400;
 	margin-bottom: 22px;
+	@include font-lato-thin-italic();
+
+	@include mq($from: tablet) {
+        color: red;
+    }
 
 	b {
 		font-weight: 700;
