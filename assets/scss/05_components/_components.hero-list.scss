@@ -3,14 +3,27 @@
 	background: #ededed;
 
 	&__list {
-		
+		counter-reset: section;
 	}
 
 	&__list-item {
-		margin-bottom: 30px;
+		margin-bottom: 40px;
+		padding-left: 65px;
+		position: relative;
+
+		&:before {
+			@include font-lato-bold;
+			@include font-size(60px, 1);
+			color: #ffc519;
+			counter-increment: section; 
+			content: counter(section) ".";
+			left: 0;
+			position: absolute;
+		}
 	}
 
 	&__item-heading {
-		font-size: 16px;
+		@include font-size(16px, 1.4);
+		margin-bottom: 8px;
 	}
 }

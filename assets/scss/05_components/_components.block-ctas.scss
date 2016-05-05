@@ -2,12 +2,28 @@
 .block-ctas {
 
 	&__cta {
-		border-bottom: 1px solid #000;
 		padding-bottom: 40px;
 		padding-top: 40px;
+		position: relative;
+
+		&:after {
+			@include linear-gradient(to right, #fff 0%, #fff 20%, #000 21%, #000 80%, #fff 81%, #fff 100%);
+			bottom: 0;
+			content: "";
+			display: block;
+			height: 1px;
+			position: absolute;
+			width: 100%;
+		}
 
 		&:last-child {
-			border-bottom: 0;
+			&:after {
+				width: 0;
+			}
 		}
+	}
+
+	&__copy {
+		margin-bottom: 40px;
 	}
 }

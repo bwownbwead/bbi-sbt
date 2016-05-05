@@ -1,0 +1,10 @@
+
+body {
+	@include font-size($base-font-size, $base-line-height);
+	color: #302e2e;
+	font-family: $base-font;
+} 
+
+p {
+	margin-bottom: 16px;
+}

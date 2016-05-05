@@ -513,19 +513,16 @@ html {
   zoom: 1; }
 
 /* IE7 */
+body {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 20.8px;
+  line-height: 1.3rem;
+  color: #302e2e;
+  font-family: "Lato", "Helvetica", "Arial", "Roboto", sans-serif; }
+
 p {
   margin-bottom: 16px; }
-
-label, input, select {
-  display: block;
-  width: 100%; }
-
-label {
-  margin-bottom: 10px; }
-
-input, select {
-  background: #fff;
-  margin-bottom: 20px; }
 
 .canon {
   font-size: 14px;
@@ -534,16 +531,23 @@ input, select {
   line-height: 1.1375rem; }
 
 .trafalgar {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 18.2px;
-  line-height: 1.1375rem; }
+  font-size: 34px;
+  font-size: 2.125rem;
+  line-height: 40.8px;
+  line-height: 2.55rem;
+  font-weight: 400;
+  margin-bottom: 22px; }
+  .trafalgar b {
+    font-weight: 700; }
 
 .double-pica {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 18.2px;
-  line-height: 1.1375rem; }
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 28.6px;
+  line-height: 1.7875rem;
+  font-weight: 900;
+  margin-bottom: 16px;
+  text-transform: uppercase; }
 
 .great-primer {
   font-size: 14px;
@@ -575,11 +579,30 @@ input, select {
   line-height: 18.2px;
   line-height: 1.1375rem; }
 
+label, input, select {
+  display: block;
+  width: 100%; }
+
+label {
+  font-weight: 900;
+  margin-bottom: 10px;
+  padding-left: 10px; }
+
+input, select {
+  background: #fff;
+  border-radius: 3px;
+  border: 0;
+  margin-bottom: 28px;
+  padding: 10px; }
+
+select {
+  padding-left: 8px; }
+
 /*
 Components
 ----------------------------------- */
 .inner-wrap {
-  padding: 20px; }
+  padding: 20px 30px; }
   .inner-wrap--horz {
     padding-bottom: 0;
     padding-top: 0; }
@@ -591,22 +614,10 @@ Components
   margin-bottom: 40px; }
 
 .site-header__logo {
-  background: #000;
   display: block;
-  height: 35px;
   width: 150px; }
-
-.section-heading {
-  font-size: 34px;
-  font-weight: 400;
-  margin-bottom: 22px;
-  font-weight: 100;
-  font-style: italic; }
-  @media (min-width: 46.25em) {
-    .section-heading {
-      color: red; } }
-  .section-heading b {
-    font-weight: 700; }
+  .site-header__logo svg {
+    max-height: 50px; }
 
 .fluid-image {
   width: 100%; }
@@ -616,7 +627,8 @@ Components
 
 .cta {
   border: 3px solid #8ce300;
-  border-radius: 10px;
+  border-radius: 3px;
+  color: #302e2e;
   display: table;
   font-weight: 900;
   padding: 10px 40px;
@@ -627,6 +639,8 @@ Components
   .cta--center {
     margin-left: auto;
     margin-right: auto; }
+  .cta--fill {
+    background-color: #8ce300; }
 
 .site-navigation {
   display: none; }
@@ -648,31 +662,82 @@ Components
   justify-content: center;
   -ms-flex-pack: center; }
   .secondary-navigation__item {
+    -webkit-flex-grow: 1;
+    -moz-flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
+    -ms-flex-positive: 1;
     text-align: center;
     width: 30%; }
+    .secondary-navigation__item:first-child {
+      text-align: left; }
+    .secondary-navigation__item:last-child {
+      text-align: right; }
   .secondary-navigation__link {
-    font-weight: bold;
+    font-weight: 900;
+    color: #383332;
     text-decoration: none;
     text-transform: uppercase; }
+  .secondary-navigation__icon {
+    fill: #8ce300;
+    height: 17px;
+    margin-left: 5px;
+    position: relative;
+    top: 2px;
+    width: 17px; }
 
 .search-bike-form {
-  background: #ededed; }
+  background: #ededed;
+  padding-bottom: 40px;
+  padding-top: 40px; }
 
 .hero-list {
   background: #ededed; }
+  .hero-list__list {
+    counter-reset: section; }
   .hero-list__list-item {
-    margin-bottom: 30px; }
+    margin-bottom: 40px;
+    padding-left: 65px;
+    position: relative; }
+    .hero-list__list-item:before {
+      font-weight: 700;
+      font-size: 60px;
+      font-size: 3.75rem;
+      line-height: 60px;
+      line-height: 3.75rem;
+      color: #ffc519;
+      counter-increment: section;
+      content: counter(section) ".";
+      left: 0;
+      position: absolute; }
   .hero-list__item-heading {
-    font-size: 16px; }
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 22.4px;
+    line-height: 1.4rem;
+    margin-bottom: 8px; }
 
 .block-ctas__cta {
-  border-bottom: 1px solid #000;
   padding-bottom: 40px;
-  padding-top: 40px; }
-  .block-ctas__cta:last-child {
-    border-bottom: 0; }
+  padding-top: 40px;
+  position: relative; }
+  .block-ctas__cta:after {
+    background-color: #fff;
+    background-image: -webkit-linear-gradient(left, #fff 0%, #fff 20%, #000 21%, #000 80%, #fff 81%, #fff 100%);
+    background-image: linear-gradient(to right,#fff 0%, #fff 20%, #000 21%, #000 80%, #fff 81%, #fff 100%);
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    width: 100%; }
+  .block-ctas__cta:last-child:after {
+    width: 0; }
 
-.product-list__item {
+.block-ctas__copy {
+  margin-bottom: 40px; }
+
+.media-list__item {
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -688,26 +753,53 @@ Components
   flex-wrap: wrap;
   margin-bottom: 40px; }
 
-.product-list__image {
+.media-list__image {
   padding-right: 20px;
   width: 50%; }
 
-.product-list__info {
+.media-list__info {
   width: 50%; }
 
-.product-list__cta {
+.media-list__cta {
   padding-top: 20px;
   text-align: center;
   width: 100%; }
 
-.product-list__price span {
+.media-list__price span {
   color: #8ce300; }
 
+.media-list--alt {
+  background: #ffc519; }
+
 .testimonials {
-  background: #ededed; }
+  background: #ededed;
+  padding-bottom: 40px;
+  padding-top: 40px; }
+  .testimonials__quote {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 30.8px;
+    line-height: 1.925rem;
+    padding-left: 20px;
+    padding-right: 20px; }
+    .testimonials__quote p:last-child {
+      margin-bottom: 0; }
 
 .no-list {
   margin: 0;
   padding: 0; }
   .no-list li {
     list-style: none; }
+
+.align-center {
+  margin-left: auto;
+  margin-right: auto; }
+
+.ta--center {
+  text-align: center; }
+
+.ta--left {
+  text-align: left; }
+
+.ta--right {
+  text-align: right; }

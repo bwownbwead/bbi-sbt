@@ -1,5 +1,5 @@
 
-.product-list {
+.media-list {
 
 	&__item {
 		@include display(flex);
@@ -22,8 +22,12 @@
 		width: 100%;
 	}
 
-	&__title {
+	&__make {
 
+	}
+
+	&__model {
+		
 	}
 
 	&__price {
@@ -34,5 +38,9 @@
 
 	&__distance {
 		
+	}
+
+	&--alt {
+		background: #ffc519;
 	}
 }

@@ -21,18 +21,10 @@ $content-max-width-wide: 1440px !default;
 $content-image-max-width-wide: 1400px !default;
 
 // -------------------------------------------------------------
-// base colours (references named colors in _settings.colors.scss)
-// -------------------------------------------------------------
-
-$base-font-color: 		#363636; // #222 !default  //currently: dark grey
-$base-bg-color: 		$grey--light3;
-$base-bg-color-light:   #fff;
-
-// -------------------------------------------------------------
 // base visual vars
 // -------------------------------------------------------------
 
-$base-radius: 		4px !default;
+$base-radius: 		3px !default;
 
 // -------------------------------------------------------------
 // base animation vars

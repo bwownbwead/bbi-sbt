@@ -6,7 +6,7 @@ Components
 // common
 
 .inner-wrap {
-	padding: 20px;
+	padding: 20px 30px;
 
 	&--horz {
 		padding-bottom: 0;
@@ -28,27 +28,13 @@ Components
 	}
 
 	&__logo {
-		background: #000;
+		
 		display: block;
-		height: 35px;
 		width: 150px;
-	}
-}
 
-// headings
-
-.section-heading {
-	font-size: 34px;
-	font-weight: 400;
-	margin-bottom: 22px;
-	@include font-lato-thin-italic();
-
-	@include mq($from: tablet) {
-        color: red;
-    }
-
-	b {
-		font-weight: 700;
+		svg {
+			max-height: 50px;
+		}
 	}
 }
 
@@ -64,7 +50,8 @@ Components
 
 .cta {
 	border: 3px solid #8ce300;
-	border-radius: 10px;
+	border-radius: $base-radius;
+	color: #302e2e;
 	display: table;
 	font-weight: 900;
 	padding: 10px 40px;
@@ -79,6 +66,10 @@ Components
 		margin-left: auto;
 		margin-right: auto; 
 	}
+
+	&--fill {
+		background-color: #8ce300;;
+	}
 }
 
 // block ctas
@@ -90,7 +81,7 @@ Components
 @import 'components.search-bike-form';
 @import 'components.hero-list';
 @import 'components.block-ctas';
-@import 'components.product-list';
+@import 'components.media-list';
 @import 'components.testimonials';
 
 

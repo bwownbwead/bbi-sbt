@@ -7,11 +7,20 @@
 }
 
 .trafalgar {
-	@include font-size(14px, 1.3);
+	@include font-size(34px, 1.2);
+	@include font-lato-normal;
+	margin-bottom: 22px;
+
+	b {
+		@include font-lato-bold;
+	}
 }
 
 .double-pica {
-	@include font-size(14px, 1.3);
+	@include font-size(22px, 1.3);
+	@include font-lato-ultra-bold;
+	margin-bottom: 16px;
+	text-transform: uppercase;
 }
 
 .great-primer {
@@ -33,3 +42,6 @@
 .minion {
 	@include font-size(14px, 1.3);
 }
+
+
+// 

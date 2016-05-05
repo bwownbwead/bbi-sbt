@@ -4,13 +4,32 @@
 	@include justify-content(center);
 
 	&__item {
+		@include flex-grow(1);
 		text-align: center;
 		width: 30%;
+
+		&:first-child {
+			text-align: left;
+		}
+
+		&:last-child {
+			text-align: right;
+		}
 	}
 
 	&__link {
-		font-weight: bold;
+		@include font-lato-ultra-bold;
+		color: #383332;
 		text-decoration: none;
-		text-transform: uppercase;	
+		text-transform: uppercase;
+	}
+
+	&__icon {
+		fill: #8ce300;
+		height: 17px;
+		margin-left: 5px;
+		position: relative;
+		top: 2px;
+		width: 17px;
 	}
 }
