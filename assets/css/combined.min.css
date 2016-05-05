@@ -513,9 +513,6 @@ html {
   zoom: 1; }
 
 /* IE7 */
-body {
-  font-family: 'Lato', sans-serif; }
-
 p {
   margin-bottom: 16px; }
 
@@ -529,6 +526,54 @@ label {
 input, select {
   background: #fff;
   margin-bottom: 20px; }
+
+.canon {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
+
+.trafalgar {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
+
+.double-pica {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
+
+.great-primer {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
+
+.pica {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
+
+.long-primer {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
+
+.brevier {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
+
+.minion {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 18.2px;
+  line-height: 1.1375rem; }
 
 /*
 Components
