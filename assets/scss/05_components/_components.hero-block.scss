@@ -1,0 +1,40 @@
+.hero-block {
+	@include mq($from: desktop) {
+		background: blue;
+		padding: 125px 0;
+	}	
+
+	&__inner-wrap {
+		@include mq($from: desktop) {
+			@include display(flex);
+			@include justify-content(space-between);
+		}
+	}
+
+	&__panel {
+
+		&--site-intro {
+			display: none;
+			max-width: 600px;
+			padding-right: 50px;
+
+			@include mq($from: desktop) {
+				display: block;
+				@include align-self(flex-end);
+			}
+		}
+	}
+
+	&__heading {
+		color: #fff;
+		margin-bottom: 60px;
+	}
+
+	&__cta {
+		margin-bottom: 30px;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

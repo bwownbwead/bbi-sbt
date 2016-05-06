@@ -1,4 +1,8 @@
 
 .site-navigation {
 	display: none;
+
+	@include mq($from: desktop) {
+		display: block;
+	}
 }

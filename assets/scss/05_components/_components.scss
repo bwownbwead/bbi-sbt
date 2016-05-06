@@ -5,8 +5,16 @@ Components
 
 // common
 
+.site-wrap {
+	
+}
+
 .inner-wrap {
 	padding: 20px 30px;
+
+	@include mq($from: desktop) {
+		padding: 0;
+	}
 
 	&--horz {
 		padding-bottom: 0;
@@ -19,34 +27,21 @@ Components
 	}
 }
 
-// site header
-
-.site-header {
-
-	&__logo-wrap {
-		margin-bottom: 40px;
-	}
-
-	&__logo {
-		
-		display: block;
-		width: 150px;
-
-		svg {
-			max-height: 50px;
-		}
+.inner-wrap_\@_desktop {
+	@extend %align-center;
+	@include mq($from: desktop) {
+		max-width: 1390px;
 	}
 }
+
+// site header
+
+
 
 .fluid-image {
 	width: 100%;
 }
 
-// site intro
-
-.site-intro {
-	display: none;
-}
 
 .cta {
 	border: 3px solid #8ce300;
@@ -62,6 +57,10 @@ Components
 		padding: 10px 20px;
 	}
 
+	&--massive {
+		@include font-size(30px, 1.3);
+	}
+
 	&--center {
 		margin-left: auto;
 		margin-right: auto; 
@@ -72,7 +71,19 @@ Components
 	}
 }
 
-// block ctas
+
+
+.split-features {
+	@include mq($from: desktop) {
+		@include display(flex);
+	}
+
+	&__feature {
+		@include mq($from: desktop) {
+			width: 50%;
+		}
+	}
+}
 
 
 
@@ -83,6 +94,8 @@ Components
 @import 'components.block-ctas';
 @import 'components.media-list';
 @import 'components.testimonials';
+@import 'components.hero-block';
+@import 'components.site-header';
 
 
 

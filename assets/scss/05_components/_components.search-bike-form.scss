@@ -3,4 +3,10 @@
 	background: #ededed;
 	padding-bottom: 40px;
 	padding-top: 40px;
+
+	@include mq($from: desktop) {
+		background-color: #ffc519;
+		padding: 40px 30px;
+		width: 580px;
+	}
 }

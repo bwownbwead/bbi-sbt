@@ -3,7 +3,8 @@
 // http://www.bbc.co.uk/gel/guidelines/typography
 
 .canon {
-	@include font-size(14px, 1.3);
+	@include font-size(60px, 1.3);
+	@include font-lato-bold;
 }
 
 .trafalgar {
@@ -13,6 +14,10 @@
 
 	b {
 		@include font-lato-bold;
+	}
+
+	@include mq($from: desktop) {
+		
 	}
 }
 

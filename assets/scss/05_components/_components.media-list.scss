@@ -43,4 +43,27 @@
 	&--alt {
 		background: #ffc519;
 	}
+
+	&--most-viewed-products {
+		padding-bottom: 60px;
+		padding-top: 60px;
+	}
+
+	&--most-viewed-products & {
+
+		&__list {
+			@include mq($from: desktop) {
+				@include display(flex);
+				@include flex-grow(1);
+				@include flex-basis(0);
+				@include justify-content(space-between);
+			}
+		}
+
+		&__item {
+			@include mq($from: desktop) {
+				margin-bottom: 0;
+			}
+		}
+	}
 }

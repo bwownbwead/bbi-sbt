@@ -1,0 +1,35 @@
+.site-header {
+
+	@include mq($from: desktop) {
+		padding: 40px 0;
+	}
+
+	&__logo-wrap {
+		margin-bottom: 40px;
+
+		@include mq($from: desktop) {
+			display: inline;
+		}
+	}
+
+	&__logo {
+		
+		display: block;
+		width: 150px;
+
+		@include mq($from: desktop) {
+			height: 75px;
+			width: 270px;
+		}
+
+		svg {
+			max-height: 50px;
+
+			@include mq($from: desktop) {
+				height: 75px;
+				max-height: none;
+				width: 270px;
+			}
+		}
+	}
+}

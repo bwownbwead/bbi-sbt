@@ -1,10 +1,27 @@
 
 .block-ctas {
 
+	&__list {
+		@include mq($from: desktop) {
+			@include display(flex);
+			padding-bottom: 60px;
+			padding-top: 60px;	
+		}
+	}
+
 	&__cta {
 		padding-bottom: 40px;
 		padding-top: 40px;
 		position: relative;
+
+		@include mq($from: desktop) {
+			@include flex-grow(1);
+			@include flex-basis(0);
+			border-right: 1px solid #000;
+			padding-right: 50px;	
+			padding-bottom: 20px;
+			padding-top: 20px;
+		}
 
 		&:after {
 			@include linear-gradient(to right, #fff 0%, #fff 20%, #000 21%, #000 80%, #fff 81%, #fff 100%);
@@ -14,9 +31,20 @@
 			height: 1px;
 			position: absolute;
 			width: 100%;
+
+			@include mq($from: desktop) {
+				display: none;
+			}
 		}
 
 		&:last-child {
+
+			@include mq($from: desktop) {
+				border-right: 0;
+				padding-left: 50px;
+				padding-right: 50px;
+			}
+
 			&:after {
 				width: 0;
 			}

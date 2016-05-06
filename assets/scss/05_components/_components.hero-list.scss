@@ -2,14 +2,31 @@
 .hero-list {
 	background: #ededed;
 
+	@include mq($from: desktop) {
+		padding-bottom: 60px;
+		padding-top: 60px;	
+	}
+
 	&__list {
 		counter-reset: section;
+
+		@include mq($from: desktop) {
+			@include display(flex);
+			@include flex-grow(1);
+			@include flex-basis(0);
+			@include justify-content(space-between);
+		}
 	}
 
 	&__list-item {
 		margin-bottom: 40px;
 		padding-left: 65px;
 		position: relative;
+
+		@include mq($from: desktop) {
+			margin-bottom: 0;
+			width: 30%;
+		}
 
 		&:before {
 			@include font-lato-bold;

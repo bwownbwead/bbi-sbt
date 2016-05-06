@@ -19,12 +19,10 @@
 	</head>
 
 	<body>
-
 		
-		
-		<div class="site-wrap">
+		<div class="site-wrap align-center">
 			<header class="site-header">
-				<div class="inner-wrap">
+				<div class="inner-wrap inner-wrap_@_desktop">
 					<div class="site-header__logo-wrap">
 						<a href="/" class="site-header__logo">
 							<!-- <img src="assets/images/sbt-logo--header.gif" class="fluid-image" alt="SuperbikeTrader.co.uk"> -->
@@ -74,70 +72,76 @@
 				</div>
 			</header>
 
-			<section>
-				<div class="site-intro">
-					<h1>
-						Search over 20,000 used bikes to find your perfect match.
-					</h1>
+			<section class="hero-block">
+				<div class="hero-block__inner-wrap inner-wrap_@_desktop">
+					<div class="hero-block__panel hero-block__panel--site-intro">
+						<h1 class="hero-block__heading canon">
+							Search over 20,000 used bikes to find your perfect match.
+						</h1>
 
-					<ul>
-						<li><a href="">Find out more</a></li>
-						<li><a href="">Sell your bike</a></li>
-					</ul>
-				</div>
-
-				<form action="" class="search-bike-form">
-					<div class="inner-wrap inner-wrap--horz">
-						<h2 class="double-pica ta--center">Search for a bike</h2>
-
-						<ol class="no-list">
-							<li>
-								<label for="search-bike-form-postcode">Postcode</label>
-								<input id="search-bike-form-postcode" type="text">
+						<ul class="no-list">
+							<li class="hero-block__cta">
+								<a class="cta cta--fill cta--massive" href="">Find out more</a>
 							</li>
-							<li>
-								<label for="search-bike-form-distance">Distance</label>
-								<select name="" id="search-bike-form-distance">
-									<option>20 miles</option>
-									<option>40 miles</option>
-									<option>60 miles</option>
-									<option>80 miles</option>
-									<option>100 miles</option>
-								</select>
+							<li class="hero-block__cta">
+								<a class="cta cta--massive" href="">Sell your bike</a>
 							</li>
-							<li>
-								<label for="search-bike-form-make">Make</label>
-								<select name="" id="search-bike-form-make">
-									<option>Select</option>
-								</select>
-							</li>
-							<li>
-								<label for="search-bike-form-model">Model</label>
-								<select name="" id="search-bike-form-model">
-									<option>Select</option>
-								</select>
-							</li>
-							<li>
-								<label for="search-bike-form-price-min">Price Min</label>
-								<select name="" id="search-bike-form-price-min">
-									<option>Select</option>
-								</select>
-							</li>
-							<li>
-								<label for="search-bike-form-price-max">Price Max</label>
-								<select name="" id="search-bike-form-price-max">
-									<option>Select</option>
-								</select>
-							</li>
-						</ol>
-
-						<button class="cta cta--fill align-center">Search bikes</button>
+						</ul>
 					</div>
-				</form>
+
+					<form action="" class="hero-block__panel search-bike-form">
+						<div class="inner-wrap inner-wrap--horz">
+							<h2 class="double-pica ta--center">Search for a bike</h2>
+
+							<ol class="no-list">
+								<li>
+									<label for="search-bike-form-postcode">Postcode</label>
+									<input id="search-bike-form-postcode" type="text">
+								</li>
+								<li>
+									<label for="search-bike-form-distance">Distance</label>
+									<select name="" id="search-bike-form-distance">
+										<option>20 miles</option>
+										<option>40 miles</option>
+										<option>60 miles</option>
+										<option>80 miles</option>
+										<option>100 miles</option>
+									</select>
+								</li>
+								<li>
+									<label for="search-bike-form-make">Make</label>
+									<select name="" id="search-bike-form-make">
+										<option>Select</option>
+									</select>
+								</li>
+								<li>
+									<label for="search-bike-form-model">Model</label>
+									<select name="" id="search-bike-form-model">
+										<option>Select</option>
+									</select>
+								</li>
+								<li>
+									<label for="search-bike-form-price-min">Price Min</label>
+									<select name="" id="search-bike-form-price-min">
+										<option>Select</option>
+									</select>
+								</li>
+								<li>
+									<label for="search-bike-form-price-max">Price Max</label>
+									<select name="" id="search-bike-form-price-max">
+										<option>Select</option>
+									</select>
+								</li>
+							</ol>
+
+							<button class="cta cta--fill align-center">Search bikes</button>
+						</div>
+					</form>
+				</div>
 			</section>
 
 			<section class="block-ctas">
-				<div class="inner-wrap inner-wrap--horz">
+				<div class="inner-wrap inner-wrap--horz inner-wrap_@_desktop">
 					<ul class="block-ctas__list no-list">
 						<li class="block-ctas__cta">
 							<!-- 
@@ -175,7 +179,7 @@
 			</section>
 
 			<section class="hero-list">
-				<div class="inner-wrap">
+				<div class="inner-wrap inner-wrap_@_desktop">
 					<h2 class="trafalgar">
 						How to sell your bike on <b>Superbike Trader</b>	
 					</h1>
@@ -212,13 +216,27 @@
 				</div>
 			</section>
 
-			<section class="media-list">
-				<div class="inner-wrap">
+			<section class="media-list media-list--most-viewed-products">
+				<div class="inner-wrap inner-wrap_@_desktop">
 					<h1 class="trafalgar">
 						This week's <strong>most viewed bikes</strong>
 					</h1>
 
-					<ul class="no-list">
+					<ul class="media-list__list no-list">
+						<li class="media-list__item">
+							<div class="media-list__image">
+								<img src="assets/images/static-placeholders/most-viewed-bikes.jpg" class="fluid-image">
+							</div>
+							<div class="media-list__info">
+								<h2 class="media-list__title">Kawasaki</h2>
+								<h3 class="media-list__title">NINJA H2 R</h3>
+								<p class="media-list__price">Price: <span>£750</span></p>
+								<p class="media-list__distance">Distance: 173 miles</p>
+							</div>
+							<div class="media-list__cta">
+								<a href="" class="cta cta--small cta--center">View Bike&hellip;</a>
+							</div>
+						</li>
 						<li class="media-list__item">
 							<div class="media-list__image">
 								<img src="assets/images/static-placeholders/most-viewed-bikes.jpg" class="fluid-image">
@@ -251,8 +269,8 @@
 				</div>
 			</section>
 
-			<div>
-				<section class="testimonials">
+			<div class="split-features">
+				<section class="split-features__feature testimonials">
 					<div class="inner-wrap">
 						<h1 class="testimonials__heading trafalgar">
 							Our happy customers
@@ -270,7 +288,7 @@
 						</blockquote>
 					</div>
 				</section>
-				<section class="media-list media-list--alt">
+				<section class="split-features__feature media-list media-list--alt">
 					<div class="inner-wrap">
 						<h1 class="trafalgar">News &amp; Features</h1>
 						<ul class="no-list">

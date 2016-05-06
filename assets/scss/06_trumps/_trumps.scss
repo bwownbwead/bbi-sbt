@@ -1,14 +1,5 @@
 
-.no-list {
-	margin: 0;
-	padding: 0;
-
-	li {
-		list-style: none;
-	}
-}
-
-.align-center {
+.align-center, %align-center {
 	margin-left: auto;
 	margin-right: auto;
 }
