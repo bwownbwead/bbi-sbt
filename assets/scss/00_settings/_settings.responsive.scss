@@ -8,13 +8,14 @@ $mq-responsive: true;
 // across team members. It will improve communication between
 // stakeholders, designers, developers, and testers.
 $mq-breakpoints: (
+    mobile:   320px,
     large-mobile: 	380px,
     phablet:  		480px,
     small-tablet: 	580px,
     tablet:    		768px,
     desktop:    	1024px,
     wide:    		1366px,
-    wider:    		1600px,
+    widest:    		1600px,
 
 
     // Tweakpoints
@@ -31,7 +32,7 @@ $mq-static-breakpoint: desktop;
 // right corner of your site during development, add the breakpoints
 // to this list, ordered by width, e.g. (mobile, tablet, desktop).
 
-// $mq-show-breakpoints: (mobile, mobileLandscape, tablet, desktop, wide);
+$mq-show-breakpoints: (mobile, large-mobile, phablet, small-tablet, tablet, desktop, wide, widest);
 
 @import '../../../node_modules/sass-mq/mq';
 

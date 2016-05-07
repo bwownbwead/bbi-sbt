@@ -1,8 +1,20 @@
 
 .site-navigation {
-	display: none;
+	// display: none;
+	padding-bottom: $base-spacing-unit;
 
 	@include mq($from: desktop) {
 		display: block;
+	}
+
+	&__list-item {
+		margin-bottom: rem($base-spacing-unit--small);
+	}
+
+	&__link {
+		@include font-size(28px, 1.2);
+		@include font-lato-bold;
+		color: map-get($colours, dark-grey);
+		text-decoration: none;
 	}
 }

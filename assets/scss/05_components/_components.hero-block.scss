@@ -1,7 +1,10 @@
 .hero-block {
 	@include mq($from: desktop) {
-		background: blue;
-		padding: 125px 0;
+		background-image: url(#{$path--img}home-intro-hero-bg.jpg);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		padding: rem(125px) 0;
 	}	
 
 	&__inner-wrap {
@@ -15,8 +18,8 @@
 
 		&--site-intro {
 			display: none;
-			max-width: 600px;
-			padding-right: 50px;
+			max-width: rem(800px);
+			padding-right: rem(52px);
 
 			@include mq($from: desktop) {
 				display: block;
@@ -27,11 +30,11 @@
 
 	&__heading {
 		color: #fff;
-		margin-bottom: 60px;
+		margin-bottom: rem(60px);
 	}
 
 	&__cta {
-		margin-bottom: 30px;
+		margin-bottom: rem(32px);
 
 		&:last-child {
 			margin-bottom: 0;

@@ -19,17 +19,17 @@
 
 	&__link {
 		@include font-lato-ultra-bold;
-		color: #383332;
+		color: map-get($colours, dark-grey);
 		text-decoration: none;
 		text-transform: uppercase;
 	}
 
 	&__icon {
-		fill: #8ce300;
-		height: 17px;
-		margin-left: 5px;
+		fill: map-get($colours, green);
+		height: rem(17px);
+		margin-left: rem(5px);
 		position: relative;
-		top: 2px;
-		width: 17px;
+		top: .2em;
+		width: rem(17px);
 	}
 }

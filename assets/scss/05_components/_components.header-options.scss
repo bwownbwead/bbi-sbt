@@ -1,0 +1,16 @@
+
+.header-options {
+	padding-bottom: $base-spacing-unit--large;
+	position: relative;
+
+	&__phone-number {
+		@include font-size(20px, 1.2);
+		margin: 0;
+	}
+
+	&__social-nav {
+		bottom: $base-spacing-unit--large;
+		position: absolute;
+		right: 0;
+	}
+}

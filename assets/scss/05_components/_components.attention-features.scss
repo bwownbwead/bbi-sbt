@@ -1,26 +1,26 @@
 
-.block-ctas {
+.attention-features {
 
 	&__list {
 		@include mq($from: desktop) {
 			@include display(flex);
-			padding-bottom: 60px;
-			padding-top: 60px;	
+			padding-bottom: rem(60px);
+			padding-top:rem(60px);	
 		}
 	}
 
-	&__cta {
-		padding-bottom: 40px;
-		padding-top: 40px;
+	&__feature {
+		padding-bottom: rem($base-spacing-unit--large);
+		padding-top: rem($base-spacing-unit--large);
 		position: relative;
 
 		@include mq($from: desktop) {
 			@include flex-grow(1);
 			@include flex-basis(0);
 			border-right: 1px solid #000;
-			padding-right: 50px;	
-			padding-bottom: 20px;
-			padding-top: 20px;
+			padding-right: rem(50px);	
+			padding-bottom: rem($base-spacing-unit);
+			padding-top: rem($base-spacing-unit);
 		}
 
 		&:after {
@@ -41,8 +41,8 @@
 
 			@include mq($from: desktop) {
 				border-right: 0;
-				padding-left: 50px;
-				padding-right: 50px;
+				padding-left: rem(50px);
+				padding-right: rem(50px);
 			}
 
 			&:after {
@@ -52,6 +52,10 @@
 	}
 
 	&__copy {
-		margin-bottom: 40px;
+		margin-bottom: rem($base-spacing-unit--large);
+
+		@include mq($from: desktop) {
+			max-width: rem(400px);
+		}
 	}
 }

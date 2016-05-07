@@ -1,16 +1,69 @@
 
 body {
 	@include font-size($base-font-size, $base-line-height);
-	color: #302e2e;
+	color: map-get($colours, dark-grey);
 	font-family: $base-font;
+
+	@include mq($from: widest) {
+		@include font-size($base-font-size--large, $base-line-height--large);
+	}
 } 
 
 p {
-	margin-bottom: 16px;
+	margin-bottom: rem(16px);
 }
 
 cite {
 	font-style: normal;
+}
+
+// common
+
+.site-wrap {
+	
+}
+
+.inner-wrap {
+	padding: rem(20px) rem(20px);
+
+	@include mq($from: large-mobile) {
+		padding: rem(20px) rem(30px);
+	}
+
+	@include mq($from: desktop) {
+		padding: 0;
+	}
+
+	&--horz {
+		padding-bottom: 0;
+		padding-top: 0;
+	}
+
+	&--vert {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+.inner-wrap_\@_tablet {
+	@extend %align-center;
+	@include mq($from: tablet) {
+		max-width: $page-wrap-width-at-tablet;
+	}
+
+	@include mq($from: desktop) {
+		max-width: $page-wrap-width-at-desktop;
+	}
+
+	@include mq($from: wide) {
+		max-width: $page-wrap-width-at-wide;
+	}
+}
+
+.inner-wrap_\@_widest {
+	@include mq($from: widest) {
+		max-width: $page-wrap-width-at-widest--extra;
+	}
 }
 
 .no-list {
@@ -20,4 +73,8 @@ cite {
 	li {
 		list-style: none;
 	}
+}
+
+.fluid-image {
+	width: 100%;
 }

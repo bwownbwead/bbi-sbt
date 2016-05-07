@@ -1,0 +1,14 @@
+
+.social-nav {
+
+	&__item {
+		display: inline-block;
+		margin-left: rem($base-spacing-unit--small);
+
+		svg {
+			fill: map-get($colours, yellow);
+			height: 20px;
+			width: 30px;
+		}
+	}
+}
