@@ -12,6 +12,7 @@
 	}
 
 	@include mq($from: tablet) {
+		@include transition(none);
 		@include transform(translateX(0));
 		padding: rem($base-spacing-unit--small) 0 0;
 	}

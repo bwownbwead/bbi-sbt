@@ -9,7 +9,9 @@ $heroListOptions: (
 
 
 .hero-list {
-	background: #ededed;
+	background: map-get($colours, light-grey);
+	padding-bottom: rem($base-spacing-unit--large);
+	padding-top: rem($base-spacing-unit--large);
 
 	&__heading {
 		@include mq($from: tablet) {
@@ -40,6 +42,12 @@ $heroListOptions: (
 			@include flex-basis(0);
 			@include justify-content(space-between);
 		}
+
+		.no-flexbox & {
+			@include mq($from: desktop) {
+				@include clearfix;
+			}
+		}
 	}
 
 	&__list-item {
@@ -55,6 +63,21 @@ $heroListOptions: (
 			padding-left: rem(map-get($heroListOptions, listNumberSize-at-desktop) + 5);
 			margin-bottom: 0;
 			width: 30%;
+		}
+
+		.no-flexbox & {
+			@include mq($from: desktop) {
+				float: left;
+				margin-left: 5%;
+			}
+		}
+
+		&:first-child {
+			.no-flexbox & {
+				@include mq($from: desktop) {
+					margin-left: 0;
+				}
+			}
 		}
 
 		@include mq($from: wide) {
@@ -98,6 +121,6 @@ $heroListOptions: (
 	}
 
 	&__item-heading {
-		margin-bottom: 8px;
+		margin-bottom: rem(8px);
 	}
 }

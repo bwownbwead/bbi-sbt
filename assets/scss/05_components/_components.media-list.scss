@@ -35,6 +35,9 @@
 	}
 
 	&--most-viewed-products {
+		padding-bottom: rem($base-spacing-unit--large);
+		padding-top: rem($base-spacing-unit--large);
+
 		@include mq($from: desktop) {
 			padding-bottom: rem(60px);
 			padding-top: rem(60px);
@@ -75,6 +78,10 @@
 
 			@include mq($from: widest) {
 				width: 33%;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
 			}
 		}
 

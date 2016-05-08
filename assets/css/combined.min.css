@@ -763,7 +763,8 @@ Components
         font-size: 16px;
         font-size: 1rem;
         line-height: 16px;
-        line-height: 1rem; } }
+        line-height: 1rem;
+        font-weight: 400; } }
     @media (min-width: 85.375em) {
       .site-navigation__link {
         font-size: 20px;
@@ -853,6 +854,9 @@ Components
     text-transform: uppercase; }
     @media (min-width: 64em) {
       .secondary-navigation__link {
+        font-weight: 700; } }
+    @media (min-width: 64em) {
+      .secondary-navigation__link {
         font-size: 14px;
         font-size: 0.875rem;
         line-height: 16.8px;
@@ -936,7 +940,9 @@ Components
     padding-left: 2.5rem; } }
 
 .hero-list {
-  background: #ededed; }
+  background: #ededed;
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem; }
   @media (min-width: 48em) {
     .hero-list__heading {
       margin-bottom: 2rem; } }
@@ -978,6 +984,11 @@ Components
         -o-justify-content: space-between;
         justify-content: space-between;
         -ms-flex-pack: justify; } }
+    @media (min-width: 64em) {
+      .no-flexbox .hero-list__list:after {
+        content: "";
+        display: table;
+        clear: both; } }
   .hero-list__list-item {
     margin-bottom: 40px;
     padding-left: 4.0625rem;
@@ -990,6 +1001,13 @@ Components
         padding-left: 4.375rem;
         margin-bottom: 0;
         width: 30%; } }
+    @media (min-width: 64em) {
+      .no-flexbox .hero-list__list-item {
+        float: left;
+        margin-left: 5%; } }
+    @media (min-width: 64em) {
+      .no-flexbox .hero-list__list-item:first-child {
+        margin-left: 0; } }
     @media (min-width: 85.375em) {
       .hero-list__list-item {
         padding-left: 5.3125rem; } }
@@ -1035,7 +1053,7 @@ Components
           line-height: 100px;
           line-height: 6.25rem; } }
   .hero-list__item-heading {
-    margin-bottom: 8px; }
+    margin-bottom: 0.5rem; }
 
 .attention-features__inner-wrap {
   position: relative; }
@@ -1052,10 +1070,19 @@ Components
     padding-bottom: 3.75rem;
     padding-top: 3.75rem; } }
 
+.no-flexbox .attention-features__list:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 .attention-features__feature {
   padding-bottom: 2.5rem;
   padding-top: 2.5rem;
   position: relative; }
+  @media (min-width: 48em) {
+    .no-flexbox .attention-features__feature {
+      float: left;
+      width: 50%; } }
   @media (min-width: 48em) {
     .attention-features__feature {
       -webkit-flex-grow: 1;
@@ -1087,7 +1114,7 @@ Components
     .attention-features__feature:last-child {
       border-right: 0;
       padding-left: 3.125rem;
-      padding-right: 3.125rem; } }
+      padding-right: 0; } }
   .attention-features__feature:last-child:after {
     width: 0; }
 
@@ -1098,9 +1125,16 @@ Components
       max-width: 25rem; } }
 
 .attention-features__decoration {
-  bottom: -6.875rem;
+  display: none;
+  bottom: 1.25rem;
   position: absolute;
-  right: 25%; }
+  right: -55%;
+  width: 90%; }
+  @media (min-width: 48em) {
+    .attention-features__decoration {
+      bottom: -6.875rem;
+      right: -25%;
+      width: auto; } }
 
 .media-list__item {
   display: -webkit-box;
@@ -1139,10 +1173,13 @@ Components
 .media-list--alt {
   background: #ffc519; }
 
-@media (min-width: 64em) {
-  .media-list--most-viewed-products {
-    padding-bottom: 3.75rem;
-    padding-top: 3.75rem; } }
+.media-list--most-viewed-products {
+  padding-bottom: 2.5rem;
+  padding-top: 2.5rem; }
+  @media (min-width: 64em) {
+    .media-list--most-viewed-products {
+      padding-bottom: 3.75rem;
+      padding-top: 3.75rem; } }
 
 @media (min-width: 64em) {
   .media-list--most-viewed-products .media-list__heading {
@@ -1201,6 +1238,9 @@ Components
 @media (min-width: 100em) {
   .media-list--most-viewed-products .media-list__item {
     width: 33%; } }
+
+.media-list--most-viewed-products .media-list__item:last-child {
+  margin-bottom: 0; }
 
 @media (min-width: 48em) {
   .media-list--most-viewed-products .media-list__image {
@@ -1452,6 +1492,8 @@ Components
       padding-left: 1.875rem; } }
   @media (min-width: 48em) {
     .header-options {
+      -webkit-transition: none;
+      transition: none;
       -webkit-transform: translateX(0);
       transform: translateX(0);
       padding: 0.625rem 0 0; } }

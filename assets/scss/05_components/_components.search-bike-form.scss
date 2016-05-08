@@ -1,6 +1,6 @@
 
 .search-bike-form {
-	background: #ededed;
+	background: map-get($colours, light-grey);
 	padding-bottom: rem($base-spacing-unit--large);
 	padding-top: rem($base-spacing-unit--large);
 

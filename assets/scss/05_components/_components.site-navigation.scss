@@ -45,6 +45,7 @@
 
 		@include mq($from: tablet) {
 			@include font-size($base-font-size, 1);
+			@include font-lato-normal;
 		}
 
 		@include mq($from: wide) {
