@@ -53,6 +53,7 @@ module.exports = function(grunt) {
 						'assets/js/jquery-migrate.min.js',
 						'assets/js/jquery-ui.min.js',
 						'assets/js/modernizr.min.js',
+						'assets/js/enquire.min.js',
 
 						// Partials
 						'assets/js/project.js'

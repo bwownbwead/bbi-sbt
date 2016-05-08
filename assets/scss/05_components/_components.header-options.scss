@@ -3,12 +3,17 @@
 	@include transition(all .2s ease-in-out);
 	@include transform(translateX(100%));
 	background: #fff;
-	padding: 120px $base-spacing-unit $base-spacing-unit;
+	padding: 120px rem($base-site-wrap-padding--small) rem($base-site-wrap-padding--small);
 	position: relative;
+
+	@include mq($from: large-mobile) {
+		padding-left: rem($base-site-wrap-padding);
+		padding-left: rem($base-site-wrap-padding);
+	}
 
 	@include mq($from: desktop) {
 		@include transform(translateX(0));
-		padding: $base-spacing-unit--small 0 0;
+		padding: rem($base-spacing-unit--small) 0 0;
 	}
 
 	&__phone-number {
@@ -18,7 +23,7 @@
 		@include mq($from: desktop) {
 			@include font-size(24px, 1.2);
 			@include align-items(center);
-			padding-left: $base-spacing-unit;
+			padding-left: rem($base-spacing-unit);
 		}
 	}
 
