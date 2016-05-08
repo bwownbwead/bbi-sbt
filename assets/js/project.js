@@ -40,34 +40,49 @@ $(document).ready(function(){
 		});
 	}
 
+	function moveSecondaryNav__match() {
+
+		var $secondaryNav = $('.js-secondary-navigation'),
+			$tertiaryInfo = $('.js-tertiary-info');
+
+		$secondaryNav.appendTo($tertiaryInfo);
+	}
+
+	function moveSecondaryNav__unmatch() {
+
+		var $secondaryNav = $('.js-secondary-navigation'),
+			$headerOptions = $('.js-header-options');
+
+		$secondaryNav.insertAfter($headerOptions);
+	}
+
+	// do stuff at tablet size
 	enquire.register("screen and (min-width:" + mqBreakpoints['tablet'] + ")", {
 
-	    // OPTIONAL
-	    // If supplied, triggered when a media query matches.
 	    match : function() {
 	    	moveProductLink__match();
 	    },      
-	                                
-	    // OPTIONAL
-	    // If supplied, triggered when the media query transitions 
-	    // *from a matched state to an unmatched state*.
+
 	    unmatch : function() {
 	    	moveProductLink__unmatch();
-	    },    
-	    
-	    // OPTIONAL
-	    // If supplied, triggered once, when the handler is registered.
-	    setup : function() {},    
-	                                
-	    // OPTIONAL, defaults to false
-	    // If set to true, defers execution of the setup function 
-	    // until the first time the media query is matched
+	    }, 
+
 	    deferSetup : true,
-	                                
-	    // OPTIONAL
-	    // If supplied, triggered when handler is unregistered. 
-	    // Place cleanup code here
-	    destroy : function() {}
+	      
+	});
+
+	// do stuff at desktop size
+	enquire.register("screen and (min-width:" + mqBreakpoints['desktop'] + ")", {
+
+	    match : function() {
+	    	moveSecondaryNav__match();
+	    },      
+
+	    unmatch : function() {
+	    	moveSecondaryNav__unmatch();
+	    }, 
+
+	    deferSetup : true,
 	      
 	});
 

@@ -7,11 +7,25 @@
 		text-align: right;
 	}
 
+	&__list {
+		@include mq($from: tablet) {
+			@include display(flex);
+			@include justify-content(space-between);
+		}
+
+		@include mq($from: desktop) {
+			display: block;
+		}
+	}
+
 	&__list-item {
 		margin-bottom: rem($base-spacing-unit--small);
 
-		@include mq($from: desktop) {
+		@include mq($from: tablet) {
 			display: inline-block;
+		}
+
+		@include mq($from: desktop) {
 			margin-left: rem($base-spacing-unit);
 		}
 
@@ -28,9 +42,8 @@
 		@include font-size(28px, 1.2);
 		@include font-lato-bold;
 		color: map-get($colours, dark-grey);
-		text-decoration: none;
 
-		@include mq($from: desktop) {
+		@include mq($from: tablet) {
 			@include font-size($base-font-size, 1);
 		}
 

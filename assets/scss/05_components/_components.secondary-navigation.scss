@@ -7,7 +7,22 @@
 		@include justify-content(space-around);		
 	}
 
+	@include mq($from: tablet) {
+		@include justify-content(space-between);		
+		margin-top: rem(15px);
+	}
+
+	// enquire js will move this element
+	// if JS is on so no margin needed
+	// in new context
+	.js & { 
+		@include mq($from: desktop) {
+			margin-top: 0;
+		}
+	}
+
 	@include mq($from: desktop) {
+		@include justify-content(space-around);
 		padding-bottom: 0;
 		float: right;
 		width: auto;
@@ -39,10 +54,13 @@
 	&__link {
 		@include font-lato-ultra-bold;
 		color: map-get($colours, dark-grey);
-		text-decoration: none;
 		text-transform: uppercase;
 
 		@include mq($from: desktop) {
+			@include font-size(14px, 1.2);
+		}
+
+		@include mq($from: wide) {
 			@include font-size(16px, 1.2);
 		}
 	}

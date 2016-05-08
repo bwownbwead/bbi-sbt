@@ -1,9 +1,17 @@
 
 .social-nav {
 
+	@include mq($from: tablet) {
+		margin-left: rem($base-spacing-unit);
+	}
+
 	&__item {
 		display: inline-block;
 		margin-left: rem($base-spacing-unit--small);
+
+		@include mq($from: tablet) {
+			margin-left: 0;
+		}
 
 		svg {
 			fill: map-get($colours, yellow);

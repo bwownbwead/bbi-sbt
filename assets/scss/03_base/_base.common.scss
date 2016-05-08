@@ -17,6 +17,15 @@ cite {
 	font-style: normal;
 }
 
+a {
+	color: map-get($colours, green);
+	text-decoration: none;
+
+	&:hover {
+		color: map-get($colours, dark-grey);
+	}
+}
+
 .inner-wrap {
 	padding: rem($base-site-wrap-padding--small);
 

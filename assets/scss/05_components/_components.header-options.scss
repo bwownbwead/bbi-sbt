@@ -11,7 +11,7 @@
 		padding-left: rem($base-site-wrap-padding);
 	}
 
-	@include mq($from: desktop) {
+	@include mq($from: tablet) {
 		@include transform(translateX(0));
 		padding: rem($base-spacing-unit--small) 0 0;
 	}
@@ -19,6 +19,8 @@
 	&__phone-number {
 		@include font-size(20px, 1.2);
 		margin: 0;
+		position: relative;
+		top: -.14em;
 
 		@include mq($from: desktop) {
 			@include font-size(24px, 1.2);

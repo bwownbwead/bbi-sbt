@@ -168,6 +168,12 @@
 			margin-bottom: rem($base-spacing-unit--small);
 		}
 
+		&__cta {
+			color: map-get($colours, dark-grey);
+			padding-top: 0;
+			text-align: left;
+		}
+
 		&__general-cta {
 			@include mq($from: desktop) {
 				margin-left: $imageWidthAtDesktop;

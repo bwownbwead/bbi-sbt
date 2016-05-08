@@ -31,7 +31,7 @@ $siteHeaderOptions: (
 			right: rem($base-site-wrap-padding);
 		}
 
-		@include mq($from: desktop) {
+		@include mq($from: tablet) {
 			display: none;
 		}
 	}
@@ -46,7 +46,7 @@ $siteHeaderOptions: (
 			@include transform(translateX(0));
 		}
 
-		@include mq($from: desktop) {
+		@include mq($from: tablet) {
 			display: none;
 		}
 	}
@@ -59,8 +59,13 @@ $siteHeaderOptions: (
 		z-index: map-get($zindex, lower);
 		width: 50%;
 
-		@include mq($from: desktop) {
+		@include mq($from: tablet) {
 			float: left;
+			margin-bottom: rem($base-spacing-unit);
+		}
+
+		@include mq($from: desktop) {
+			margin-bottom: 0;
 			width: $logoWidthAtDesktopPlusMargin;
 		}
 	}
@@ -100,7 +105,7 @@ $siteHeaderOptions: (
 		top: 0;
 		z-index: map-get($zindex, lowest);
 
-		@include mq($from: desktop) {
+		@include mq($from: tablet) {
 			@include display(flex);
 			@include flex-direction(column-reverse);
 			float: right;
@@ -126,7 +131,12 @@ $siteHeaderOptions: (
 			right: rem($base-site-wrap-padding);
 		}
 
+		@include mq($from: tablet) {
+			display: none;
+		}
+
 		@include mq($from: desktop) {
+			@include display(flex);
 			@include flex-direction(row-reverse);
 			float: right;
 			padding-bottom: $base-spacing-unit / 2;
