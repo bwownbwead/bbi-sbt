@@ -885,9 +885,16 @@ Components
 
 .hero-list {
   background: #ededed; }
+  @media (min-width: 48em) {
+    .hero-list__heading {
+      margin-bottom: 2rem; } }
   @media (min-width: 64em) {
     .hero-list__heading {
       margin-bottom: 2.5rem; } }
+  @media (min-width: 48em) {
+    .hero-list {
+      padding-bottom: 1.75rem;
+      padding-top: 1.75rem; } }
   @media (min-width: 64em) {
     .hero-list {
       padding-bottom: 3.75rem;
@@ -923,6 +930,9 @@ Components
     margin-bottom: 40px;
     padding-left: 4.0625rem;
     position: relative; }
+    @media (min-width: 48em) {
+      .hero-list__list-item {
+        margin-bottom: 1.875rem; } }
     @media (min-width: 64em) {
       .hero-list__list-item {
         padding-left: 4.375rem;
@@ -934,6 +944,8 @@ Components
     @media (min-width: 100em) {
       .hero-list__list-item {
         padding-left: 6.5625rem; } }
+    .hero-list__list-item:last-child {
+      margin-bottom: 0; }
     .hero-list__list-item:before {
       font-weight: 700;
       font-size: 60px;
@@ -947,6 +959,12 @@ Components
       position: absolute;
       top: -.08em; }
       @media (min-width: 48em) {
+        .hero-list__list-item:before {
+          font-size: 50px;
+          font-size: 3.125rem;
+          line-height: 50px;
+          line-height: 3.125rem; } }
+      @media (min-width: 64em) {
         .hero-list__list-item:before {
           font-size: 65px;
           font-size: 4.0625rem;
