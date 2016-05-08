@@ -24,10 +24,10 @@ cite {
 }
 
 .inner-wrap {
-	padding: rem(20px) rem(20px);
+	padding: rem($base-site-wrap-padding--small);
 
 	@include mq($from: large-mobile) {
-		padding: rem(20px) rem(30px);
+		padding: rem($base-site-wrap-padding--small) rem($base-site-wrap-padding);
 	}
 
 	@include mq($from: desktop) {

@@ -18,12 +18,18 @@ $siteHeaderOptions: (
 
 	&__menu-toggle-label {
 		background: red;
-		position: absolute;
-		top: 25px;
-		right: 25px;
-		width: 40px;
 		height: 40px;
+		overflow: hidden;
+		position: absolute;
+		right: rem($base-site-wrap-padding--small);
+		text-indent: -100%;
+		top: rem(25px);
+		width: 40px;
 		z-index: map-get($zindex, lower);
+
+		@include mq($from: large-mobile) {
+			right: rem($base-site-wrap-padding);
+		}
 
 		@include mq($from: desktop) {
 			display: none;
@@ -110,9 +116,15 @@ $siteHeaderOptions: (
 	&__tertiary-info {
 		@include display(flex);
 		position: absolute;
-		bottom: 20px;
-		left: 20px;
-		right: 20px;
+		bottom: rem($base-site-wrap-padding--small);
+		left: rem($base-site-wrap-padding--small);
+		right: rem($base-site-wrap-padding--small);
+
+		@include mq($from: large-mobile) {
+			bottom: rem($base-site-wrap-padding);
+			left: rem($base-site-wrap-padding);
+			right: rem($base-site-wrap-padding);
+		}
 
 		@include mq($from: desktop) {
 			@include flex-direction(row-reverse);

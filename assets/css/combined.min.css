@@ -543,7 +543,7 @@ cite {
   font-style: normal; }
 
 .inner-wrap {
-  padding: 1.25rem 1.25rem; }
+  padding: 1.25rem; }
   @media (min-width: 23.75em) {
     .inner-wrap {
       padding: 1.25rem 1.875rem; } }
@@ -737,12 +737,6 @@ Components
         font-size: 1.25rem;
         line-height: 24px;
         line-height: 1.5rem; } }
-    @media (min-width: 85.375em) {
-      .site-navigation__link {
-        font-size: 24px;
-        font-size: 1.5rem;
-        line-height: 28.8px;
-        line-height: 1.8rem; } }
 
 .secondary-navigation {
   display: -webkit-box;
@@ -1345,12 +1339,17 @@ Components
 
 .site-header__menu-toggle-label {
   background: red;
-  position: absolute;
-  top: 25px;
-  right: 25px;
-  width: 40px;
   height: 40px;
+  overflow: hidden;
+  position: absolute;
+  right: 1.25rem;
+  text-indent: -100%;
+  top: 1.5625rem;
+  width: 40px;
   z-index: 25; }
+  @media (min-width: 23.75em) {
+    .site-header__menu-toggle-label {
+      right: 1.875rem; } }
   @media (min-width: 64em) {
     .site-header__menu-toggle-label {
       display: none; } }
@@ -1432,9 +1431,14 @@ Components
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px; }
+  bottom: 1.25rem;
+  left: 1.25rem;
+  right: 1.25rem; }
+  @media (min-width: 23.75em) {
+    .site-header__tertiary-info {
+      bottom: 1.875rem;
+      left: 1.875rem;
+      right: 1.875rem; } }
   @media (min-width: 64em) {
     .site-header__tertiary-info {
       -webkit-box-orient: horizontal;
