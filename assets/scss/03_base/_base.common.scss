@@ -48,21 +48,21 @@ cite {
 .inner-wrap_\@_tablet {
 	@extend %align-center;
 	@include mq($from: tablet) {
-		max-width: $page-wrap-width-at-tablet;
+		max-width: rem($page-wrap-width-at-tablet);
 	}
 
 	@include mq($from: desktop) {
-		max-width: $page-wrap-width-at-desktop;
+		max-width: rem($page-wrap-width-at-desktop);
 	}
 
 	@include mq($from: wide) {
-		max-width: $page-wrap-width-at-wide;
+		max-width: rem($page-wrap-width-at-wide);
 	}
 }
 
 .inner-wrap_\@_widest {
 	@include mq($from: widest) {
-		max-width: $page-wrap-width-at-widest--extra;
+		max-width: rem($page-wrap-width-at-widest--extra);
 	}
 }
 

@@ -1,14 +1,27 @@
 
 .site-navigation {
-	// display: none;
 	padding-bottom: $base-spacing-unit;
 
 	@include mq($from: desktop) {
-		display: block;
+		padding-bottom: 0;
+		text-align: right;
 	}
 
 	&__list-item {
 		margin-bottom: rem($base-spacing-unit--small);
+
+		@include mq($from: desktop) {
+			display: inline-block;
+			margin-left: rem($base-spacing-unit);
+		}
+
+		@include mq($from: wide) {
+			margin-left: rem($base-spacing-unit + 5);
+		}
+
+		@include mq($from: widest) {
+			margin-left: rem($base-spacing-unit + 8);
+		}
 	}
 
 	&__link {
@@ -16,5 +29,13 @@
 		@include font-lato-bold;
 		color: map-get($colours, dark-grey);
 		text-decoration: none;
+
+		@include mq($from: desktop) {
+			@include font-size(20px, 1.2);
+		}
+
+		@include mq($from: wide) {
+			@include font-size(24px, 1.2);
+		}
 	}
 }

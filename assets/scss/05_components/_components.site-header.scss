@@ -1,25 +1,35 @@
+
+$siteHeaderOptions: (
+	logo-width-at-mobile: 150px,
+	logo-width-at-desktop: 270px,
+	logo-margin-right-at-desktop: 30px
+);
+
 .site-header {
+	@include clearfix;
 
 	@include mq($from: desktop) {
 		padding: rem($base-spacing-unit--large) 0;
 	}
 
+	$logoWidthAtDesktopPlusMargin: map-get($siteHeaderOptions, logo-width-at-desktop) + map-get($siteHeaderOptions, logo-margin-right-at-desktop);
+
 	&__logo-wrap {
 		margin-bottom: rem($base-spacing-unit--large);
 
 		@include mq($from: desktop) {
-			display: inline;
+			float: left;
+			width: $logoWidthAtDesktopPlusMargin;
 		}
 	}
 
 	&__logo {
-		
 		display: block;
-		width: 150px;
+		width: map-get($siteHeaderOptions, logo-width-at-mobile);
 
 		@include mq($from: desktop) {
 			height: 75px;
-			width: 270px;
+			width: map-get($siteHeaderOptions, logo-width-at-desktop);
 		}
 
 		svg {
@@ -28,8 +38,43 @@
 			@include mq($from: desktop) {
 				height: 75px;
 				max-height: none;
-				width: 270px;
+				width: map-get($siteHeaderOptions, logo-width-at-desktop);
 			}
+		}
+	}
+
+	@function calc-width-at-bp($bp) {
+		@return $bp - $logoWidthAtDesktopPlusMargin
+	}
+
+	$widthAtDesktop: calc-width-at-bp($page-wrap-width-at-desktop);
+	$widthAtWide: calc-width-at-bp($page-wrap-width-at-wide);
+
+	&__header-options {
+
+		@include mq($from: desktop) {
+			@include display(flex);
+			@include flex-direction(column-reverse);
+			float: right;
+			width: $widthAtDesktop;
+		}
+
+		@include mq($from: wide) {
+			width: $widthAtWide;
+		}
+	}
+
+	&__tertiary-info {
+		@include mq($from: desktop) {
+			@include display(flex);
+			@include flex-direction(row-reverse);
+			float: right;
+			padding-bottom: $base-spacing-unit / 2;
+			width: $widthAtDesktop;
+		}
+
+		@include mq($from: desktop) {
+			width: $widthAtWide;
 		}
 	}
 }

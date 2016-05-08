@@ -3,14 +3,29 @@
 	padding-bottom: $base-spacing-unit--large;
 	position: relative;
 
+	@include mq($from: desktop) {
+		padding-top: $base-spacing-unit--small;
+		padding-bottom: 0;
+	}
+
 	&__phone-number {
 		@include font-size(20px, 1.2);
 		margin: 0;
+
+		@include mq($from: desktop) {
+			@include font-size(24px, 1.2);
+			@include align-items(center);
+			padding-left: $base-spacing-unit;
+		}
 	}
 
 	&__social-nav {
 		bottom: $base-spacing-unit--large;
 		position: absolute;
 		right: 0;
+
+		@include mq($from: desktop) {
+			position: static;
+		}
 	}
 }

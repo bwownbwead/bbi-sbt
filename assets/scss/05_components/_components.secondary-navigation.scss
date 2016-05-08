@@ -3,6 +3,12 @@
 	@include display(flex);
 	@include justify-content(center);
 
+	@include mq($from: desktop) {
+		padding-bottom: 0;
+		float: right;
+		width: 300px;
+	}
+
 	&__item {
 		@include flex-grow(1);
 		text-align: center;
