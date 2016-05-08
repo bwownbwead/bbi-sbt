@@ -17,10 +17,6 @@
 			width: rem(695px);
 		}
 
-		// @include mq($from: tablet) {
-		// 	width: $page-wrap-width-at-tablet / 2;
-		// }
-
 		@include mq($from: desktop) {
 			width: $page-wrap-width-at-desktop / 2;
 		}
@@ -42,29 +38,8 @@
 
 		&--right {
 			@include mq($from: desktop) {
+				float: left;
 				padding-left: $desktopPadding;
-			}
-		}
-
-		&--testimonials {
-			@include mq($from: desktop) {
-				background-image: url(#{$path--img}happy-customers.png);
-				background-repeat: no-repeat;
-				background-position: left bottom;
-				background-size: 40%;
-				min-height: 350px;
-				padding-left: rem(240px);
-			}
-
-			@include mq($from: wide) {
-				background-size: 50%;
-				min-height: 480px;
-				padding-left: rem(370px);
-			}
-
-			@include mq($from: widest) {
-				min-height: 540px;
-				padding-left: rem(400px);
 			}
 		}
 	}

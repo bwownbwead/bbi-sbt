@@ -1,6 +1,7 @@
 
 $form-options: (
-	inputPadding: $base-spacing-unit--small
+	inputPadding: $base-spacing-unit--small,
+	inputPaddingAtDesktop: 16px
 );
 
 label, input, select {
@@ -17,7 +18,7 @@ label {
 	padding-left: map-get($form-options, inputPadding);
 
 	@include mq($from: desktop) {
-		padding-left: map-get($form-options, inputPadding) * 2;
+		padding-left: map-get($form-options, inputPaddingAtDesktop);
 	}
 }
 
@@ -30,7 +31,7 @@ input, select {
 
 	@include mq($from: desktop) {
 		border: 1px solid #838383;
-		padding: map-get($form-options, inputPadding) * 2;
+		padding: rem(map-get($form-options, inputPaddingAtDesktop));
 	}
 }
 
@@ -38,6 +39,6 @@ select {
 	padding-left: rem(map-get($form-options, inputPadding) - 2px);
 
 	@include mq($from: desktop) {
-		padding: rem((map-get($form-options, inputPadding) * 2) - 2px);
+		padding: rem(map-get($form-options, inputPaddingAtDesktop) - 2px);
 	}
 }

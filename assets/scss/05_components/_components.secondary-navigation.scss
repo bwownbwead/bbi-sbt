@@ -3,6 +3,10 @@
 	@include display(flex);
 	@include justify-content(center);
 
+	@include mq($from: small-tablet) {
+		@include justify-content(space-around);		
+	}
+
 	@include mq($from: desktop) {
 		padding-bottom: 0;
 		float: right;
@@ -14,9 +18,13 @@
 		text-align: center;
 		width: 30%;
 
+		@include mq($from: small-tablet) {
+			@include flex-grow(0);
+			width: auto;
+		}
+
 		@include mq($from: desktop) {
 			margin-left: $base-spacing-unit;
-			width: auto;
 		}
 
 		&:first-child {

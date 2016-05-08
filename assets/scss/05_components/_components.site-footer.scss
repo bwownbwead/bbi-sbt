@@ -1,8 +1,5 @@
 
 .site-footer {
-	
-	@include mq($from: desktop) {
-		padding: rem($base-spacing-unit--large) 0;
-		text-align: center;
-	}
+	padding: rem($base-spacing-unit--large) 0;
+	text-align: center;
 }
