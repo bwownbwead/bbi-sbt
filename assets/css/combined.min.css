@@ -967,7 +967,7 @@ Components
   .hero-list__item-heading {
     margin-bottom: 8px; }
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .attention-features__list {
     display: -webkit-box;
     display: -moz-box;
@@ -983,7 +983,7 @@ Components
   padding-bottom: 2.5rem;
   padding-top: 2.5rem;
   position: relative; }
-  @media (min-width: 64em) {
+  @media (min-width: 48em) {
     .attention-features__feature {
       -webkit-flex-grow: 1;
       -moz-flex-grow: 1;
@@ -1007,10 +1007,10 @@ Components
     height: 1px;
     position: absolute;
     width: 100%; }
-    @media (min-width: 64em) {
+    @media (min-width: 48em) {
       .attention-features__feature:after {
         display: none; } }
-  @media (min-width: 64em) {
+  @media (min-width: 48em) {
     .attention-features__feature:last-child {
       border-right: 0;
       padding-left: 3.125rem;
@@ -1020,7 +1020,7 @@ Components
 
 .attention-features__copy {
   margin-bottom: 2.5rem; }
-  @media (min-width: 64em) {
+  @media (min-width: 48em) {
     .attention-features__copy {
       max-width: 25rem; } }
 
