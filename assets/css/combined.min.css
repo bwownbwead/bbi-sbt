@@ -1092,7 +1092,7 @@ Components
   .media-list--most-viewed-products .media-list__heading {
     padding-left: 125px; } }
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .media-list--most-viewed-products .media-list__list {
     display: -webkit-box;
     display: -moz-box;
@@ -1118,7 +1118,7 @@ Components
     justify-content: space-between;
     -ms-flex-pack: justify; } }
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .media-list--most-viewed-products .media-list__item {
     -webkit-box-orient: vertical;
     box-orient: vertical;
@@ -1142,7 +1142,7 @@ Components
   .media-list--most-viewed-products .media-list__item {
     width: 33%; } }
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .media-list--most-viewed-products .media-list__image {
     padding-bottom: 0.625rem;
     padding-right: 0;
@@ -1157,7 +1157,7 @@ Components
   .media-list--most-viewed-products .media-list__image {
     width: 50%; } }
 
-@media (min-width: 64em) {
+@media (min-width: 48em) {
   .media-list--most-viewed-products .media-list__info {
     width: 100%; } }
 

@@ -54,7 +54,7 @@
 		}
 
 		&__list {
-			@include mq($from: desktop) {
+			@include mq($from: tablet) {
 				@include display(flex);
 				@include flex-grow(1);
 				@include flex-basis(0);
@@ -63,7 +63,7 @@
 		}
 
 		&__item {
-			@include mq($from: desktop) {
+			@include mq($from: tablet) {
 				@include flex-direction(column);
 				margin-bottom: 0;
 				width: 30%;
@@ -79,7 +79,7 @@
 		}
 
 		&__image {
-			@include mq($from: desktop) {
+			@include mq($from: tablet) {
 				padding-bottom: rem($base-spacing-unit--small);
 				padding-right: 0;
 				width: 100%;
@@ -96,17 +96,13 @@
 		}
 
 		&__info {
-			@include mq($from: desktop) {
+			@include mq($from: tablet) {
 				width: 100%;
 			}
 
 			@include mq($from: wide) {
 				width: 42.5%;
 			}
-		}
-
-		&__make {
-			
 		}
 
 		&__model {
