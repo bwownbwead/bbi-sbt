@@ -124,7 +124,7 @@
 		&__distance {
 			margin-bottom: 0;
 
-			@include mq($from: desktop) {
+			@include mq($from: tablet) {
 				margin-bottom: rem(16px);
 			}
 		}
@@ -139,21 +139,30 @@
 
 	&--news-features & {
 
-		$imageWidth: 30%;
+		$imageWidthAtSmallTablet: 20%;
+		$imageWidthAtDesktop: 30%;
 
 		&__info {
+			@include mq($from: small-tablet) {
+				width: 100 - $imageWidthAtSmallTablet;
+			}
+
 			@include mq($from: desktop) {
 				@include display(flex);
 				@include flex-direction(column);
 				@include justify-content(center);
-				width: 70%;
+				width: 100 - $imageWidthAtDesktop;
 			}	
 		}
 
 		&__image {
+			@include mq($from: small-tablet) {
+				padding-right: rem($base-spacing-unit--large);
+				width: $imageWidthAtSmallTablet;
+			}
+
 			@include mq($from: desktop) {
-				padding-right: rem(40px);
-				width: $imageWidth;
+				width: $imageWidthAtDesktop;
 			}
 		}
 
@@ -163,7 +172,7 @@
 
 		&__general-cta {
 			@include mq($from: desktop) {
-				margin-left: $imageWidth;
+				margin-left: $imageWidthAtDesktop;
 			}
 		}
 	}

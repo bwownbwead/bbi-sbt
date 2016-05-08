@@ -40,7 +40,7 @@ $(document).ready(function(){
 		});
 	}
 
-	enquire.register("screen and (min-width:" + mqBreakpoints['desktop'] + ")", {
+	enquire.register("screen and (min-width:" + mqBreakpoints['tablet'] + ")", {
 
 	    // OPTIONAL
 	    // If supplied, triggered when a media query matches.
