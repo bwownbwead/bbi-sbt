@@ -22,7 +22,11 @@
 		
 		<div class="site-wrap align-center">
 			<header class="site-header">
-				<div class="inner-wrap inner-wrap_@_tablet">
+				<div class="site-header__inner-wrap inner-wrap inner-wrap_@_tablet">
+					
+					<label for="toggle-menu" class="site-header__menu-toggle-label">Menu</label>
+					<input type="checkbox" class="site-header__menu-toggle-checkbox" data-dependency="menu-function" id="toggle-menu" />
+
 					<div class="site-header__logo-wrap">
 						<a href="/" title="Superbike Trader" class="site-header__logo">
 							<!-- <img src="assets/images/sbt-logo--header.gif" class="fluid-image" alt="SuperbikeTrader.co.uk"> -->
@@ -31,7 +35,7 @@
 							</svg>
 						</a>
 					</div>
-					<div class="site-header__header-options header-options">
+					<div class="site-header__header-options header-options" data-dependency="menu-function">
 						<nav class="site-navigation">
 							<ul class="site-navigation__list">
 								<li class="site-navigation__list-item">
@@ -53,12 +57,12 @@
 						</nav>
 
 						<div class="site-header__tertiary-info">
-							<p class="site-header__phone-number header-options__phone-number">
+							<p class="header-options__phone-number">
 								0845 235 1849
 							</p>
 							
-							<div class="site-header__header-social-nav">
-								<ul class="header-options__social-nav social-nav no-list">
+							<div class="header-options__social-nav">
+								<ul class="social-nav no-list">
 									<li class="social-nav__item">
 										<a href="" title="Follow us on Facebook">
 											<svg xmlns="http://www.w3.org/2000/svg" class="fluid-image" version="1.1">

@@ -12,10 +12,46 @@ $siteHeaderOptions: (
 		padding: rem($base-spacing-unit--large) 0;
 	}
 
+	&__inner-wrap {
+		position: relative;
+	}
+
+	&__menu-toggle-label {
+		background: red;
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		width: 40px;
+		height: 40px;
+		z-index: map-get($zindex, lower);
+
+		@include mq($from: desktop) {
+			display: none;
+		}
+	}
+
+	&__menu-toggle-checkbox {
+		left: -9999em;
+		position: absolute;
+		top: -9999em;
+		visibility: hidden;
+
+		&:checked ~ [data-dependency="menu-function"] {
+			@include transform(translateX(0));
+		}
+
+		@include mq($from: desktop) {
+			display: none;
+		}
+	}
+
 	$logoWidthAtDesktopPlusMargin: map-get($siteHeaderOptions, logo-width-at-desktop) + map-get($siteHeaderOptions, logo-margin-right-at-desktop);
 
 	&__logo-wrap {
 		margin-bottom: rem($base-spacing-unit--large);
+		position: relative;
+		z-index: map-get($zindex, lower);
+		width: 50%;
 
 		@include mq($from: desktop) {
 			float: left;
@@ -51,11 +87,18 @@ $siteHeaderOptions: (
 	$widthAtWide: calc-width-at-bp($page-wrap-width-at-wide);
 
 	&__header-options {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		top: 0;
+		z-index: map-get($zindex, lowest);
 
 		@include mq($from: desktop) {
 			@include display(flex);
 			@include flex-direction(column-reverse);
 			float: right;
+			position: static;
 			width: $widthAtDesktop;
 		}
 
@@ -65,15 +108,21 @@ $siteHeaderOptions: (
 	}
 
 	&__tertiary-info {
+		@include display(flex);
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		right: 20px;
+
 		@include mq($from: desktop) {
-			@include display(flex);
 			@include flex-direction(row-reverse);
 			float: right;
 			padding-bottom: $base-spacing-unit / 2;
+			position: static;
 			width: $widthAtDesktop;
 		}
 
-		@include mq($from: desktop) {
+		@include mq($from: wide) {
 			width: $widthAtWide;
 		}
 	}
