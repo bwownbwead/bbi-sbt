@@ -1037,6 +1037,9 @@ Components
   .hero-list__item-heading {
     margin-bottom: 8px; }
 
+.attention-features__inner-wrap {
+  position: relative; }
+
 @media (min-width: 48em) {
   .attention-features__list {
     display: -webkit-box;
@@ -1093,6 +1096,11 @@ Components
   @media (min-width: 48em) {
     .attention-features__copy {
       max-width: 25rem; } }
+
+.attention-features__decoration {
+  bottom: -6.875rem;
+  position: absolute;
+  right: 25%; }
 
 .media-list__item {
   display: -webkit-box;

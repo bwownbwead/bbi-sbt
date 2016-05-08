@@ -1,6 +1,10 @@
 
 .attention-features {
 
+	&__inner-wrap {
+		position: relative;
+	}
+
 	&__list {
 		@include mq($from: tablet) {
 			@include display(flex);
@@ -57,5 +61,11 @@
 		@include mq($from: tablet) {
 			max-width: rem(400px);
 		}
+	}
+
+	&__decoration {
+		bottom: rem(-110px);
+		position: absolute;
+		right: 25%;
 	}
 }
