@@ -14,6 +14,7 @@
 	
 	&__quote {
 		@include font-size(22px, 1.4);
+		margin-bottom: rem($base-spacing-unit--large); 
 		padding-left: rem($base-spacing-unit);
 		padding-right: rem($base-spacing-unit);
 

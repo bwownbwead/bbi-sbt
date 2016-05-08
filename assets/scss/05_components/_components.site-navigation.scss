@@ -20,7 +20,7 @@
 		}
 
 		@include mq($from: widest) {
-			margin-left: rem($base-spacing-unit + 8);
+			margin-left: rem($base-spacing-unit--large);
 		}
 	}
 
@@ -31,6 +31,10 @@
 		text-decoration: none;
 
 		@include mq($from: desktop) {
+			@include font-size($base-font-size, 1);
+		}
+
+		@include mq($from: wide) {
 			@include font-size(20px, 1.2);
 		}
 	}

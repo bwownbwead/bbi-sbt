@@ -17,8 +17,8 @@
 	&__field {
 		clear: both;
 
-		&--one-half_\@_desktop {
-			@include mq($from: desktop) {
+		&--one-half_\@_small-tablet {
+			@include mq($from: small-tablet) {
 				clear: none;
 				float: left;
 				padding-right: rem($base-spacing-unit--small);
@@ -26,7 +26,7 @@
 			}
 
 			& + & {
-				@include mq($from: desktop) {
+				@include mq($from: small-tablet) {
 					padding-left: rem($base-spacing-unit--small);
 					padding-right: 0;
 				}

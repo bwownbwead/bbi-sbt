@@ -6,13 +6,18 @@
 	@include mq($from: desktop) {
 		padding-bottom: 0;
 		float: right;
-		width: 300px;
+		width: auto;
 	}
 
 	&__item {
 		@include flex-grow(1);
 		text-align: center;
 		width: 30%;
+
+		@include mq($from: desktop) {
+			margin-left: $base-spacing-unit;
+			width: auto;
+		}
 
 		&:first-child {
 			text-align: left;
@@ -28,6 +33,10 @@
 		color: map-get($colours, dark-grey);
 		text-decoration: none;
 		text-transform: uppercase;
+
+		@include mq($from: desktop) {
+			@include font-size(16px, 1.2);
+		}
 	}
 
 	&__icon {
